@@ -3,28 +3,25 @@ package lab1;
 public class EmployeeTeamTest {
     public static void main(String[] args) {
 
-        Employee boss = new Employee("John", "Smith", 8000);
-        Employee employee = new Employee("Alice", "Green", 4000);
+        Employee boss = new Employee("Nil", "Uzuma", 90000);
+        Employee employee = new Employee("Somchai", "Sunt", 35000);
 
         EmployeeTeam team = new EmployeeTeam(boss, employee);
 
-        // Test printEmployeeDetails()
+        System.out.println("Employee Details:");
         team.printEmployeeDetails();
 
-        // Test printAllEmployeesDetails()
+        System.out.println("\nAll Employees Details:");
         team.printAllEmployeesDetails();
 
-        // Test updateSalaryOfEmployee()
-        team.updateSalaryOfEmployee("Alice", 5000);
+        team.updateSalaryOfEmployee("Somchai", 40000);
 
-        // Test invalid salary
-        team.updateSalaryOfEmployee("John", -100);
-
+        System.out.println("\nAfter Salary Update:");
         team.printAllEmployeesDetails();
 
-        // Test giveRaiseToAllEmployees()
         team.giveRaiseToAllEmployees();
 
+        System.out.println("\nAfter 10% Raise:");
         team.printAllEmployeesDetails();
     }
 }

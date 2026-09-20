@@ -1,39 +1,43 @@
 package lab1;
 
+
 public class EmployeeTest {
     public static void main(String[] args) {
 
-        // 1. Create one Employee and read attributes
-        Employee emp1 = new Employee("John", "Smith", 3000);
+        Employee emp1 = new Employee("Nil", "Uzuma", 25000);
 
-        System.out.println(emp1.getFirstName());
-        System.out.println(emp1.getLastName());
-        System.out.println(emp1.getMonthlySalary());
+        System.out.println("Employee Details:");
+        System.out.println("Employee1: " +
+            emp1.getFirstName() + " " +
+            emp1.getLastName() +
+            " Salary: " + emp1.getMonthlySalary());
 
-        // Modify all attributes
-        emp1.setFirstName("James");
-        emp1.setLastName("Brown");
-        emp1.setMonthlySalary(3500);
+        emp1.setFirstName("Nil");
+        emp1.setLastName("Uzuma");
+        emp1.setMonthlySalary(35000);
 
-        // Invalid salary should not update
-        emp1.setMonthlySalary(-500);
+        System.out.println("Updated Employee:");
+        System.out.println("Employee1: " +
+            emp1.getFirstName() + " " +
+            emp1.getLastName() +
+            " Salary: " + emp1.getMonthlySalary());
 
-        System.out.println(emp1.getFirstName());
-        System.out.println(emp1.getLastName());
-        System.out.println(emp1.getMonthlySalary());
+        Employee employee1 = new Employee("Nil", "Uzuma", 25000);
+        Employee employee2 = new Employee("Somchai", "Sunt", 45000);
 
-        // 2. Create two Employee objects
-        Employee emp2 = new Employee("Alice", "Green", 4000);
-        Employee emp3 = new Employee("Bob", "White", 5000);
+        System.out.println("Employee1 yearly_salary: " +
+            employee1.getYearlySalary());
 
-        System.out.println(emp2.getYearlySalary());
-        System.out.println(emp3.getYearlySalary());
+        System.out.println("Employee2 yearly_salary: " +
+            employee2.getYearlySalary());
 
-        // 3. Give each employee a 10% raise
-        emp2.giveRaise();
-        emp3.giveRaise();
+        employee1.giveRaise();
+        employee2.giveRaise();
 
-        System.out.println(emp2.getYearlySalary());
-        System.out.println(emp3.getYearlySalary());
+        System.out.println("10% raise of employee1: " +
+            employee1.getYearlySalary());
+
+        System.out.println("10% raise of employee2: " +
+            employee2.getYearlySalary());
     }
 }
