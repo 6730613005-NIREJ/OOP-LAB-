@@ -22,7 +22,7 @@ public class EmployeeTest {
             emp1.getLastName() +
             " Salary: " + emp1.getMonthlySalary());
 
-        Employee employee1 = new Employee("Nil", "Uzuma", 25000);
+        Employee employee1 = new Employee("Anom", "Uzuma", 25000);
         Employee employee2 = new Employee("Somchai", "Sunt", 45000);
 
         System.out.println("Employee1 yearly_salary: " +
